@@ -88,7 +88,7 @@ function CheckinBooking() {
             }}
             id="breakfast"
           >
-            Want to add breakfast for {formatCurrency(optionalBreakfastPrice)}?
+            需要花费 {formatCurrency(optionalBreakfastPrice)} 添加早餐吗？
           </Checkbox>
         </Box>
       )}
@@ -100,7 +100,7 @@ function CheckinBooking() {
           disabled={confirmPaid || isCheckingIn}
           id="confirm"
         >
-          I confirm that {guests.fullName} has paid the total amount of{" "}
+          我确认 {guests.fullName} 已经支付了总金额{" "}
           {!addBreakfast
             ? formatCurrency(totalPrice)
             : `${formatCurrency(
@@ -113,10 +113,10 @@ function CheckinBooking() {
 
       <ButtonGroup>
         <Button onClick={handleCheckin} disabled={!confirmPaid || isCheckingIn}>
-          Check in booking #{bookingId}
+          确认入住 Check in booking #{bookingId}
         </Button>
         <Button variation="secondary" onClick={moveBack}>
-          Back
+          后退
         </Button>
       </ButtonGroup>
     </>

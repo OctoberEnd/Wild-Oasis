@@ -28,7 +28,7 @@ function SignupForm() {
           type="text"
           id="fullName"
           disabled={isLoading}
-          {...register("fullName", { required: "This field is required" })}
+          {...register("fullName", { required: "必填项" })}
         />
       </FormRow>
 
@@ -38,11 +38,11 @@ function SignupForm() {
           id="email"
           disabled={isLoading}
           {...register("email", {
-            required: "This field is required",
+            required: "必填项",
             // email格式验证
             pattern: {
               value: /\S+@\S+\.\S+/,
-              message: "Please provide a valid email address",
+              message: "邮箱格式不正确",
             },
           })}
         />
@@ -57,10 +57,10 @@ function SignupForm() {
           id="password"
           disabled={isLoading}
           {...register("password", {
-            required: "This field is required",
+            required: "必填项",
             minLength: {
               value: 8,
-              message: "Password needs a minimum of 8 characters",
+              message: "密码最少需要8个字符",
             },
           })}
         />
@@ -72,9 +72,8 @@ function SignupForm() {
           id="passwordConfirm"
           disabled={isLoading}
           {...register("passwordConfirm", {
-            required: "This field is required",
-            validate: (value) =>
-              value === getValues().password || "Passwords need to match",
+            required: "必填项",
+            validate: (value) => value === getValues().password || "密码不一致",
           })}
         />
       </FormRow>
@@ -89,7 +88,7 @@ function SignupForm() {
         >
           Cancel
         </Button>
-        <Button disabled={isLoading}>Create new user</Button>
+        <Button disabled={isLoading}>创建新用户</Button>
       </FormRow>
     </Form>
   );

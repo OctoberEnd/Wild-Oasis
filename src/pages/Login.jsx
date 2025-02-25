@@ -18,7 +18,7 @@ function Login() {
   return (
     <LoginLayout>
       <Logo />
-      <Heading as="h4">Log in to your account</Heading>
+      <Heading as="h4">登录你的账号</Heading>
       <LoginForm />
       {/*启用安全策略，仅有被授权用户可获取数据 <BookingTable /> */}
     </LoginLayout>

@@ -51,7 +51,7 @@ function BookingDetail() {
     <>
       <Row type="horizontal">
         <HeadingGroup>
-          <Heading as="h1">Booking #{bookingId}</Heading>
+          <Heading as="h1">预定 #{bookingId}</Heading>
           <Tag type={statusToTagName[status]}>{status.replace("-", " ")}</Tag>
         </HeadingGroup>
         <ButtonText onClick={moveBack}>&larr; Back</ButtonText>
@@ -62,7 +62,7 @@ function BookingDetail() {
       <ButtonGroup>
         {status === "unconfirmed" && (
           <Button onClick={() => navigate(`/checkin/${bookingId}`)}>
-            Check in
+            Check in 入住
           </Button>
         )}
         {status === "checked-in" && (
@@ -71,13 +71,13 @@ function BookingDetail() {
             onClick={() => checkout(bookingId)}
             disabled={isCheckingOut}
           >
-            Check out
+            Check out 退房
           </Button>
         )}
 
         <Modal>
           <Modal.Open opens="delete">
-            <Button variation="danger">Delete booking</Button>
+            <Button variation="danger">Delete booking 删除预定</Button>
           </Modal.Open>
 
           <Modal.Window name="delete">
@@ -95,7 +95,7 @@ function BookingDetail() {
         </Modal>
 
         <Button variation="secondary" onClick={moveBack}>
-          Back
+          Back 后退
         </Button>
       </ButtonGroup>
     </>

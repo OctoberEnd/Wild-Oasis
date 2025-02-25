@@ -32,12 +32,12 @@ function TodayItem({ activity }) {
 
   return (
     <StyledTodayItem>
-      {status === "unconfirmed" && <Tag type="green">Arriving</Tag>}
-      {status === "checked-in" && <Tag type="blue">Departing</Tag>}
+      {status === "unconfirmed" && <Tag type="green">到达</Tag>}
+      {status === "checked-in" && <Tag type="blue">离开</Tag>}
 
       <Flag src={guests.countryFlag} alt={`Flag of ${guests.country}`} />
       <Guest>{guests.fullName}</Guest>
-      <div>{numNights} nights</div>
+      <div>{numNights} 晚</div>
 
       {status === "unconfirmed" && (
         <Button
@@ -46,7 +46,7 @@ function TodayItem({ activity }) {
           as={Link}
           to={`/checkin/${id}`}
         >
-          Check in
+          入住
         </Button>
       )}
       {status === "checked-in" && <CheckoutButton bookingId={id} />}

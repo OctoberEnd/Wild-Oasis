@@ -12,7 +12,7 @@ function CheckoutButton({ bookingId }) {
       onClick={() => checkout(bookingId)}
       disabled={isCheckingOut}
     >
-      Check out
+      退房
     </Button>
   );
 }

@@ -82,7 +82,7 @@ function BookingRow({
           {isToday(new Date(startDate))
             ? "Today"
             : formatDistanceFromNow(startDate)}{" "}
-          &rarr; {numNights} night stay
+          &rarr; {numNights} 晚
         </span>
         <span>
           {format(new Date(startDate), "MMM dd yyyy")} &mdash;{" "}
@@ -101,14 +101,14 @@ function BookingRow({
               icon={<HiEye />}
               onClick={() => navigate(`/bookings/${bookingId}`)}
             >
-              see details
+              查看详情
             </Menus.Button>
             {status === "unconfirmed" && (
               <Menus.Button
                 icon={<HiArrowUpOnSquare />}
                 onClick={() => navigate(`/checkin/${bookingId}`)}
               >
-                Check in
+                办理入住
               </Menus.Button>
             )}
 
@@ -118,12 +118,12 @@ function BookingRow({
                 onClick={() => checkout(bookingId)}
                 disabled={isCheckingOut}
               >
-                Check out
+                办理退房
               </Menus.Button>
             )}
 
             <Modal.Open opens="delete">
-              <Menus.Button icon={<HiTrash />}>Delete booking</Menus.Button>
+              <Menus.Button icon={<HiTrash />}>删除预定</Menus.Button>
             </Modal.Open>
           </Menus.List>
         </Menus.Menu>

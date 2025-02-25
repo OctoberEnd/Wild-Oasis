@@ -82,7 +82,7 @@ function CabinRow({ cabin }) {
     <Table.Row>
       <Img src={image} />
       <Cabin>{name}</Cabin>
-      <div>Fits up to {maxCapacity}</div>
+      <div>适合 {maxCapacity} 人入住</div>
       <Price>{formatCurrency(regularPrice)}</Price>
       {discount ? (
         <Discount>{formatCurrency(discount)}</Discount>
@@ -100,15 +100,15 @@ function CabinRow({ cabin }) {
                 onClick={handleDuplicate}
                 disabled={isCreating}
               >
-                Duplicate
+                复制
               </Menus.Button>
 
               <Modal.Open opens="edit">
-                <Menus.Button icon={<HiPencil />}>Edit</Menus.Button>
+                <Menus.Button icon={<HiPencil />}>编辑</Menus.Button>
               </Modal.Open>
 
               <Modal.Open opens="delete">
-                <Menus.Button icon={<HiTrash />}>Delete</Menus.Button>
+                <Menus.Button icon={<HiTrash />}>删除</Menus.Button>
               </Modal.Open>
             </Menus.List>
 

@@ -10,7 +10,7 @@ function Cabins() {
   return (
     <>
       <Row type="horizontal">
-        <Heading as="h1">All cabins</Heading>
+        <Heading as="h1">所有房间</Heading>
         <CabinTableOperations />
       </Row>
       <Row>

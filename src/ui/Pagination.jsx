@@ -89,21 +89,21 @@ function Pagination({ count }) {
   return (
     <StyledPagination>
       <p>
-        Showing <span>{(currentPage - 1) * PAGE_SIZE + 1}</span> to{" "}
+        当前展示第 <span>{(currentPage - 1) * PAGE_SIZE + 1}</span> 到 第
         <span>
           {currentPage === pageCount ? count : currentPage * PAGE_SIZE}
         </span>{" "}
-        of <span>{count}</span> results
+        个结果（共 <span>{count}</span> 个）
       </p>
       <Buttons>
         <PaginationButton onClick={prevPage} disabled={currentPage === 1}>
-          <HiChevronLeft /> <span>Previous</span>
+          <HiChevronLeft /> <span>上一页</span>
         </PaginationButton>
         <PaginationButton
           onClick={nextPage}
           disabled={currentPage === pageCount}
         >
-          <span>Next</span>
+          <span>下一页</span>
           <HiChevronRight />
         </PaginationButton>
       </Buttons>

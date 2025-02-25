@@ -7,24 +7,24 @@ function CabinTableOperations() {
       <Filter
         filterField="discount"
         options={[
-          { value: "all", label: "All" },
-          { value: "no-discount", label: "No Discount" },
-          { value: "with-discount", label: "With Discount" },
+          { value: "all", label: "全部" },
+          { value: "no-discount", label: "无折扣" },
+          { value: "with-discount", label: "有折扣" },
         ]}
       />
       <SortBy
         options={[
-          { value: "name-asc", label: "Sort By Name (A-Z)" },
-          { value: "name-desc", label: "Sort By Name (Z-A)" },
-          { value: "regularPrice-asc", label: "Sort By Price (low first) " },
-          { value: "regularPrice-desc", label: "Sort By Price (high first) " },
+          { value: "name-asc", label: "按名称 (A-Z)" },
+          { value: "name-desc", label: "按名称 (Z-A)" },
+          { value: "regularPrice-asc", label: "按价格 (低) " },
+          { value: "regularPrice-desc", label: "按价格 (高) " },
           {
             value: "maxCapacity-asc",
-            label: "Sort By maxCapacity (low first)",
+            label: "按人数 (少)",
           },
           {
             value: "maxCapacity-desc",
-            label: "Sort By maxCapacity (high first)",
+            label: "按人数 (多)",
           },
         ]}
       ></SortBy>

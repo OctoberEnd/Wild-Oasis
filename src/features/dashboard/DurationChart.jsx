@@ -150,7 +150,7 @@ function DurationChart({ confirmedStays }) {
 
   return (
     <ChartBox>
-      <Heading as="h2">Stay duration summary</Heading>
+      <Heading as="h2">入住时间汇总</Heading>
       <ResponsiveContainer width="100%" height={240}>
         <PieChart>
           <Pie

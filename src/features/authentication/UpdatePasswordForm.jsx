@@ -28,10 +28,10 @@ function UpdatePasswordForm() {
           autoComplete="current-password"
           disabled={isUpdating}
           {...register("password", {
-            required: "This field is required",
+            required: "必填项",
             minLength: {
               value: 8,
-              message: "Password needs a minimum of 8 characters",
+              message: "密码至少需要8个字符",
             },
           })}
         />
@@ -47,9 +47,8 @@ function UpdatePasswordForm() {
           id="passwordConfirm"
           disabled={isUpdating}
           {...register("passwordConfirm", {
-            required: "This field is required",
-            validate: (value) =>
-              getValues().password === value || "Passwords need to match",
+            required: "必填项",
+            validate: (value) => getValues().password === value || "密码不一致",
           })}
         />
       </FormRow>
@@ -57,7 +56,7 @@ function UpdatePasswordForm() {
         <Button onClick={reset} type="reset" variation="secondary">
           Cancel
         </Button>
-        <Button disabled={isUpdating}>Update password</Button>
+        <Button disabled={isUpdating}>更新密码</Button>
       </FormRow>
     </Form>
   );

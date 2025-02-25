@@ -79,7 +79,7 @@ function CreateCabinForm({ cabinToEdit = {}, onCloseModal }) {
           id="name"
           disabled={isWorking}
           {...register("name", {
-            required: "This field is required",
+            required: "必填项",
           })}
         />
       </FormRow>
@@ -90,8 +90,8 @@ function CreateCabinForm({ cabinToEdit = {}, onCloseModal }) {
           id="maxCapacity"
           disabled={isWorking}
           {...register("maxCapacity", {
-            required: "This field is required",
-            min: { value: 1, message: "capacity should be at least 1" },
+            required: "必填项",
+            min: { value: 1, message: "入住人数最少是1" },
           })}
         />
       </FormRow>
@@ -102,8 +102,8 @@ function CreateCabinForm({ cabinToEdit = {}, onCloseModal }) {
           id="regularPrice"
           disabled={isWorking}
           {...register("regularPrice", {
-            required: "This field is required",
-            min: { value: 1, message: "regularPrice should be at least 1" },
+            required: "必填项",
+            min: { value: 1, message: "正常价格最少是￥1" },
           })}
         />
       </FormRow>
@@ -115,10 +115,9 @@ function CreateCabinForm({ cabinToEdit = {}, onCloseModal }) {
           disabled={isWorking}
           defaultValue={0}
           {...register("discount", {
-            required: "This field is required",
+            required: "必填项",
             validate: (value) =>
-              value <= getValues().regularPrice ||
-              "discount should be less than regular price",
+              value <= getValues().regularPrice || "折后价格需要少于正常价格",
           })}
         />
       </FormRow>
@@ -129,7 +128,7 @@ function CreateCabinForm({ cabinToEdit = {}, onCloseModal }) {
           id="description"
           disabled={isWorking}
           defaultValue=""
-          {...register("description", { required: "This field is required" })}
+          {...register("description", { required: "必填项" })}
         />
       </FormRow>
 
@@ -140,7 +139,7 @@ function CreateCabinForm({ cabinToEdit = {}, onCloseModal }) {
           accept="image/*"
           type="file"
           {...register("image", {
-            required: isEditSession ? false : "This field is required",
+            required: isEditSession ? false : "必填项",
           })}
         />
       </FormRow>
@@ -156,7 +155,7 @@ function CreateCabinForm({ cabinToEdit = {}, onCloseModal }) {
         </Button>
         {/* 如果按钮没有指定类型，默认会是 type="submit" */}
         <Button disabled={isWorking}>
-          {isEditSession ? "Edit Cabin" : "Create new Cabin"}
+          {isEditSession ? "编辑房间信息" : "创建新房间"}
         </Button>
       </FormRow>
     </Form>
