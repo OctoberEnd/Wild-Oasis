@@ -72,7 +72,7 @@ function CheckinBooking() {
   return (
     <>
       <Row type="horizontal">
-        <Heading as="h1">Check in booking #{bookingId}</Heading>
+        <Heading as="h1">办理入住 #{bookingId}</Heading>
         <ButtonText onClick={moveBack}>&larr; Back</ButtonText>
       </Row>
 
@@ -113,7 +113,7 @@ function CheckinBooking() {
 
       <ButtonGroup>
         <Button onClick={handleCheckin} disabled={!confirmPaid || isCheckingIn}>
-          确认入住 Check in booking #{bookingId}
+          确认办理 #{bookingId}
         </Button>
         <Button variation="secondary" onClick={moveBack}>
           后退

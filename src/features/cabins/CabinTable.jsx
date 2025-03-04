@@ -62,10 +62,10 @@ function CabinTable() {
       <Table columns=" 0.6fr 1.8fr 2.2fr 1fr 1fr 1fr">
         <Table.Header>
           <div></div>
-          <div>Cabin</div>
-          <div>Capacity</div>
-          <div>Price</div>
-          <div>Discount</div>
+          <div>房间</div>
+          <div>入住人数</div>
+          <div>价格</div>
+          <div>折扣</div>
           <div></div>
         </Table.Header>
         <Table.Body

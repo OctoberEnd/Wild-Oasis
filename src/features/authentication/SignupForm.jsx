@@ -23,7 +23,7 @@ function SignupForm() {
 
   return (
     <Form onSubmit={handleSubmit(onSubmit)}>
-      <FormRow label="Full name" error={errors?.fullName?.message}>
+      <FormRow label="姓名" error={errors?.fullName?.message}>
         <Input
           type="text"
           id="fullName"
@@ -32,7 +32,7 @@ function SignupForm() {
         />
       </FormRow>
 
-      <FormRow label="Email address" error={errors?.email?.message}>
+      <FormRow label="电子邮件地址" error={errors?.email?.message}>
         <Input
           type="email"
           id="email"
@@ -48,10 +48,7 @@ function SignupForm() {
         />
       </FormRow>
 
-      <FormRow
-        label="Password (min 8 characters)"
-        error={errors?.password?.message}
-      >
+      <FormRow label="密码" error={errors?.password?.message}>
         <Input
           type="password"
           id="password"
@@ -66,7 +63,7 @@ function SignupForm() {
         />
       </FormRow>
 
-      <FormRow label="Repeat password" error={errors?.passwordConfirm?.message}>
+      <FormRow label="再次输入密码" error={errors?.passwordConfirm?.message}>
         <Input
           type="password"
           id="passwordConfirm"
@@ -86,7 +83,7 @@ function SignupForm() {
           disabled={isLoading}
           onClick={reset}
         >
-          Cancel
+          取消
         </Button>
         <Button disabled={isLoading}>创建新用户</Button>
       </FormRow>
