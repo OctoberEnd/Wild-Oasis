@@ -1,7 +1,9 @@
 # The Wild Oasis
 
-## hotel management
+### 项目部署地址 
+使用vercel部署，需要跨防火墙
+https://wild-oasis-rouge.vercel.app/
 
-### Address
-
-https://wild-oasis-ej19o9i1o-kikis-projects-a4be1970.vercel.app
+### 初始账号密码
+test@test.com
+12345678
