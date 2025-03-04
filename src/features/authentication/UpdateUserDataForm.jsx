@@ -44,11 +44,11 @@ function UpdateUserDataForm() {
 
   return (
     <Form onSubmit={handleSubmit}>
-      <FormRow label="Email address">
+      <FormRow label="电子邮件地址">
         <Input value={email} disabled />
       </FormRow>
 
-      <FormRow label="Full name">
+      <FormRow label="姓名">
         <Input
           type="text"
           value={fullName}
@@ -58,7 +58,7 @@ function UpdateUserDataForm() {
         />
       </FormRow>
 
-      <FormRow label="Avatar image">
+      <FormRow label="头像图片">
         <FileInput
           id="avatar"
           accept="image/*"
@@ -76,7 +76,7 @@ function UpdateUserDataForm() {
         >
           取消
         </Button>
-        <Button disabled={isUpdating}>Update account</Button>
+        <Button disabled={isUpdating}>更新</Button>
       </FormRow>
     </Form>
   );

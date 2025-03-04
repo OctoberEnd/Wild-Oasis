@@ -18,10 +18,7 @@ function UpdatePasswordForm() {
 
   return (
     <Form onSubmit={handleSubmit(onSubmit)}>
-      <FormRow
-        label="Password (min 8 characters)"
-        error={errors?.password?.message}
-      >
+      <FormRow label="新密码" error={errors?.password?.message}>
         <Input
           type="password"
           id="password"
@@ -37,10 +34,7 @@ function UpdatePasswordForm() {
         />
       </FormRow>
 
-      <FormRow
-        label="Confirm password"
-        error={errors?.passwordConfirm?.message}
-      >
+      <FormRow label="确认密码" error={errors?.passwordConfirm?.message}>
         <Input
           type="password"
           autoComplete="new-password"
@@ -54,9 +48,9 @@ function UpdatePasswordForm() {
       </FormRow>
       <FormRow>
         <Button onClick={reset} type="reset" variation="secondary">
-          Cancel
+          取消
         </Button>
-        <Button disabled={isUpdating}>更新密码</Button>
+        <Button disabled={isUpdating}>更新</Button>
       </FormRow>
     </Form>
   );
